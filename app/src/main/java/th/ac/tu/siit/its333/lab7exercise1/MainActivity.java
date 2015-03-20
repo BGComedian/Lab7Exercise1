@@ -61,7 +61,7 @@ public class MainActivity extends ActionBarActivity {
                     oldId = id;
                     oldvalMins = TimeUnit.MILLISECONDS.toMinutes(newval);
                 }else{
-                    Toast t = Toast.makeText(this,"1 min please.",Toast.LENGTH_SHORT);
+                    Toast t = Toast.makeText(this,"please wait for 1 minute before pressing this again",Toast.LENGTH_SHORT);
                     t.show();
                 }
 
@@ -73,7 +73,7 @@ public class MainActivity extends ActionBarActivity {
                     oldId = id;
                     oldvalMins = TimeUnit.MILLISECONDS.toMinutes(newval);
                 }else{
-                    Toast t = Toast.makeText(this,"1 min please.",Toast.LENGTH_SHORT);
+                    Toast t = Toast.makeText(this,"please wait for 1 minute before pressing this again",Toast.LENGTH_SHORT);
                     t.show();
                 }
 
@@ -85,7 +85,7 @@ public class MainActivity extends ActionBarActivity {
                     oldId = id;
                     oldvalMins = TimeUnit.MILLISECONDS.toMinutes(newval);
                 }else{
-                    Toast t = Toast.makeText(this,"1 min please.",Toast.LENGTH_SHORT);
+                    Toast t = Toast.makeText(this,"please wait for 1 minute before pressing this again",Toast.LENGTH_SHORT);
                     t.show();
                 }
                 break;
@@ -159,6 +159,9 @@ public class MainActivity extends ActionBarActivity {
                     tempMin = jTemp.getDouble("temp_min");
                     humid = jTemp.getDouble("humidity");
                     errorMsg = "";
+                    temp-=273.15;
+                    tempMax-=273.15;
+                    tempMin-=273.15;
                     return true;
 
 
